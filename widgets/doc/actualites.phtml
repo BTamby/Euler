@@ -1,0 +1,40 @@
+<style>
+	
+	.euler_actu_date p{
+		color:#999;
+  		font-size:10px;
+	}
+</style>
+<div id="actualites" class="wims_widget_box cell small-12 medium-6 scroller">
+    <div class="title_box">
+      <h2 class="wims_title">Actualités</h2>
+      <!--<br class="clearall" />-->
+    </div>
+    <div class="box_content">
+      	<ul class="vertical menu " data-accordion-menu data-submenu-toggle="true"  >
+          <li>
+            <a href="#">Les dernières</a>
+            <ul class="menu vertical nested is-active">
+              !set nbactu=!defof nbactu in wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+              !for numactu=1 to $nbactu
+                <li>
+                  !record $numactu of wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+                </li>
+              !next
+            </ul>
+          </li>
+          <li >
+            <a href="#" >Toutes les actualités</a>
+            <ul class="menu vertical nested ">
+              !for numactu=1 to 4
+                <li>
+                  !record $numactu of wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+                </li>
+              !next
+            </ul>
+          </li>
+        </ul>
+  </div>
+</div>
+<script src="html/themes/Nikaia2/js/foundation.js"></script>
+<script src="html/themes/Nikaia2/js/app.js"></script>
