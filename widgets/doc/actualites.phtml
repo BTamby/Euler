@@ -1,34 +1,43 @@
+
 <style>
-.feedEkList{ list-style:none outside none;background-color:#FFFFFF; /*border:1px solid #D3CAD7;*/ padding:4px 6px; color:#3E3E3E;}
-.feedEkList li{border-bottom:1px solid #D3CAD7; padding:5px;}
-.feedEkList li:last-child{border-bottom:none;}
-.itemTitle a{font-weight:bold; color:#4EBAFF !important; text-decoration:none }
-.itemTitle a:hover{ text-decoration:underline }
-.itemDate{font-size:11px;color:#AAAAAA;} 
+	.euler_actu_list li{
+		list-style:none;
+	}
+	.euler_actu_date p{
+		color:#999;
+  		font-size:10px;
+	}
 </style>
-<div id="actualites" class="scroller wims_widget_box small-12 medium-6 large-6 cell">
+<div id="actualites" class="wims_widget_box cell small-12 medium-6 scroller">
     <div class="title_box">
       <h2 class="wims_title">Actualités</h2>
       <!--<br class="clearall" />-->
     </div>
     <div class="box_content">
-    		<div id="divRss" ></div>
-      <h3><span class="glyphicon glyphicon-calendar text-primary"></span> Wims Edu : Assemblée générale 2019</h3>
-	 <div>
-  		<p><img src="gifs/logo/wimsedu.png" height="53px" width="50ppx" style="vertical-align: bottom;margin-right: 10px;"> &nbsp;L’assemblée générale de l’association aura lieu le 15 juin 2019 à l'université de Paris-Est Marne-la Vallée, 5 boulevard Descartes Champs-sur-Marne, 77454 Marne La Vallée.
-  		</p>
-  		<p>
-  		Au cours de cette journée (9h00 – 17h00), nous pourrons échanger autour de projets, d’une classe d’autoformation ou des classes ouvertes …ou de toute expérience que vous désirez partager.
-  		Si vous désirez présenter une expérience dans WIMS, merci de contacter le ca (adresse ca at wimsedu.info).
-  		L’après-midi sera consacrée à des discussions centrées sur l’association, à l’assemblée générale officielle et à une présentation des nouveautés
-  		dans WIMS.
-  		</p>
-	</div>
-  <h3><span class="glyphicon glyphicon-education text-primary"></span> Formation Wims</h3>
-	<div>
-		Formations de prise en main de la plateforme Euler-Wims prévues pour les enseignants dans le premier trimestre de l'année scolaire 2019-2020. Dates à venir...
-	</div>
+      <div>
+      	<ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
+        <li class="accordion-item is-active" data-accordion-item>
+          <a href="#" class="accordion-title">Les dernières</a>
+          <div class="accordion-content" data-tab-content >
+          <ul class="euler_actu_list">
+            !set nbactu=!defof nbactu in wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+            !for numactu=1 to $nbactu
+              <li>
+                !record $numactu of wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+              </li>
+            !next
+          </ul>
+          </div>
+        </li>
+        <li class="accordion-item" data-accordion-item>
+          <a href="#" class="accordion-title">Toutes les actualités</a>
+          <div class="accordion-content" data-tab-content>
+            !read ./wimshome/public_html/modules/local/algebra/oefacveractualite.fr/data/blocactu
+          </div>
+        </li>
+      </ul>
+     </div>
   </div>
 </div>
-
-
+<script src="html/themes/Euler/js/foundation.js"></script>
+<script src="html/themes/Euler/js/app.js"></script>
