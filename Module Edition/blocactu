@@ -1,0 +1,22 @@
+!! Contenu du bloc actualités
+!! Chaque record est une actualité.
+!! Les actualités sont rangées par dates décroissantes
+!! La variable nbactu indique le nombre d'actualités à mettre dans le bloc actu en commençant par le haut
+
+!set nbactu=3
+
+:<h4><span class="text_icon exomodify"></span> Formation Wims</h4>
+<p class="euler_actu_date">20/06/2019</p>
+<p>Formations de prise en main de la plateforme Euler-Wims prévues pour les enseignants dans le premier trimestre de l'année scolaire 2019-2020. Dates à venir...</p>
+
+:<h4><span class="text_icon exomodify"></span> Wims Edu : Assemblée générale 2019</h4>
+<p class="euler_actu_date">13/06/2019</p>
+<p>L’assemblée générale de l’association aura lieu le 15 juin 2019 à l'université de Paris-Est Marne-la Vallée, 5 boulevard Descartes Champs-sur-Marne, 77454 Marne La Vallée.</p>
+
+:<h4><span class="text_icon exomodify"></span> Serveur Euler-Wims</h4>
+<p class="euler_actu_date">10/06/2019</p>
+<p>Le serveur va bientôt ouvrir...</p>
+
+:<h4><span class="text_icon exomodify"></span> Actu bidon</h4>
+<p class="euler_actu_date">02/06/2019</p>
+<p>Test</p>
