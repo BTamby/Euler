@@ -1,0 +1,28 @@
+!! Intégration de la recherche des classes ouvertes par jlben pour le thème Euler le 22/6/19
+    <ul class="wims_home_list">
+        <li>
+          !href module=$module&cmd=new&search_category=D Cours et références interactifs.
+        </li>
+        <li>
+          !href module=$module&cmd=new&search_category=T Outils de calcul et de graphisme en ligne
+          &nbsp;: nombres, fonctions, matrices, courbes, surfaces, statistiques etc.
+        </li>
+        <li>
+          !href module=$module&cmd=new&search_category=X Exercices interactifs
+           de styles et niveaux variables.
+        </li>
+        <li>
+          !href module=$module&cmd=new&search_category=R Récréations mathématiques
+          &nbsp;: casse-têtes et jeux.
+        </li>
+        <li>
+          !href module=adm/tool/glossary&cmd=new Des glossaires
+          (en construction et encore pour longtemps).
+        </li>
+        <li>
+          !href module=adm/class/Des classes des classes ouvertes (ou créer votre classe).
+        </li>
+    </ul>
+
+!! Ce qui suit n'est pas gardé par le thème Euler
+!!-------------------

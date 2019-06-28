@@ -1,0 +1,40 @@
+!! Copié à partir de /modules/home dans themes/$wims_theme/widgets
+!if $wims_theme=Euler and $lang=fr and $wims_user=$empty
+<div class="wims_widget_box small-12 cell"><!--Sur se site vous...-->
+	<div class="title_box">
+    	<h2 class="wims_title">Sur ce site, vous pourrez trouver&nbsp;:</h2>
+  	</div>
+  		!if $wims_theme!=Euler
+			<div class="wims_motd">
+			  !read ./wimshome/log/motd.phtml.$lang
+			</div>
+		!endif
+		<div class="box_content">
+		  !readproc wimshome/log/front.phtml.$lang
+		  !if yes notin $front_exist
+		  	Modifié le 22/6/19 par jlben<br/>
+		  	lire themes/$wims_theme/home/front.phtml.$lang<br/>
+		  	!read themes/$wims_theme/home/front.phtml.$lang
+		  !else
+		    !!read wimshome/log/front.phtml.$lang
+		    Lire wimshome/log/front.phtml.$lang
+		  !endif
+		</div>
+</div>
+! Si pas français !!
+!!endif
+!else
+	!if $wims_user=$empty
+	<div class="wims_motd">
+	  !read ./wimshome/log/motd.phtml.$lang
+	</div>
+	<div class="wims_frontpage">
+	  !readproc wimshome/log/front.phtml.$lang
+	  !if yes notin $front_exist
+	    !read ./front.phtml.$lang
+	  !else
+	    !read wimshome/log/front.phtml.$lang
+	  !endif
+	</div>
+	!endif
+!endif

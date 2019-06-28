@@ -1,0 +1,31 @@
+<!-- _widgets/site_title-->
+<div id="euler_wims_title">
+	 <div id = "le_logo_euler" class ="logo_euler">
+	  <a href="https://euler.ac-versailles.fr/" title="Euler-Versailles" alt="Le logo euler.ac-versailles" target="_blank">
+	 	<img class ="img-responsive" src="themes/Euler/img/logo_euler.png" alt="Logo Euler-Versailles"/>
+	 </a>
+	 </div>
+
+	 <div id="le_logo_wims" class="wimslogo">
+		 <p class="text_euler_wims wims_title">WIMS</p>
+		 !href module=home&special_parm=logo <img class ="img-responsive" src="gifs/logo.gif" alt="WIMS logo"/>
+	</div>
+
+<!-- _widgets/institution_logo.phtml -->
+!if $site_logo!=$empty
+	<div id ="le_logo_acver" class="institution_logo">
+	  <a href="$site_logolink" target="wims_external">
+	  <img class ="img-responsive" src="$site_logo" alt="logo de l'académie de versailles"/></a>
+ 	</div>
+!endif
+<!-- END _widgets/institution_logo.phtml -->
+ 
+</div>
+!!****** Supprimer dans le thème Euler****** !! 
+<!--<div class="row wims_subtitle">
+	<h2 class="col-xs-12">
+	  $V_title $N_at <a href="/">$httpd_HTTP_HOST</a>
+	 </h2>
+</div>-->
+
+<!--end _widgets/euler_site_title-->

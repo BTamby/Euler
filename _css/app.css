@@ -1,0 +1,23 @@
+.button:hover, .button:focus {
+    background-color: #ededed;
+    color: #126195; }
+
+.dropdown-pane{
+	background-color: #ededed;
+	width : 10em;
+}
+
+#actualites.scroller, #exemples.scroller {
+  height: 25em;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+
+	#actualites.scroller, #exemples.scroller {
+	  height: 20em;
+	  overflow-y: scroll;
+	  scrollbar-width: thin;
+	}
+}

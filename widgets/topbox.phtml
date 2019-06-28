@@ -1,0 +1,81 @@
+<!-- Start Nikaia2 topbox Widget -->
+<div id="wimstopbox">
+
+  !!Site Title
+  !read themes/$wims_theme/_widgets/site_title.phtml
+
+  !!!!Pas utilis√© avec le th√®me Euler, by jlben !!
+  !!if $wims_lightpopup!=yes
+    !!Institution logo
+    !!set positionlogo=right
+    !!read themes/_widgets/institution_logo.phtml
+    <!--<br class="clearall" />-->
+  !!endif
+
+
+  !distribute items li into div1
+<!-- Test menu responsive ajoutÈ le 11/6/19 par jlben -->
+<div class="title-bar" data-responsive-toggle="menu-principal" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle></button>
+  <!--<div class="title-bar-title">Apprendre DEV</div>-->
+</div>
+<!-- FIn ajout -->
+  <div id = "menu-principal" class ="top-bar">
+    <!--<div class="menuglobal">-->
+    <div class="row column">
+
+    !if $[$wims_home_items_cnt + $wims_hm_cnt + $wims_link_close_cnt]!=0 or ($module_path notitemof home,adm,classes and _exam notin $session and $module_init_parm == $empty)
+      !!read themes/_widgets/headhome.phtml
+      !!read themes/_widgets/headmenu.phtml
+      !read themes/$wims_theme/widgets/permalink.phtml
+      !reset div0 div1
+    !endif
+
+    <!--<ul class="wimsmenu float_left menu">-->
+    <ul class="dropdown menu vertical medium-horizontal" data-responsive-menu="accordion medium-dropdown">
+   
+      !!module_path = $module_path
+      !!wims_hm_cnt = $wims_hm_cnt
+
+      !! s'affiche sur la page d'accueil des visiteurs
+      !if $module isitemof home,adm/class/classes and $wims_user=$empty
+        !if $type!=participant
+          !! Participants Zone
+          <li class="menuitem n_participant">
+            !read ./adm/oneitem.phtml n_participant,1,module=adm/class/classes&type=participant
+          </li>
+        !endif
+        !if $type!=supervisor
+          !! Teachers Zone
+          <li class="menuitem n_supervisor">
+            !read ./adm/oneitem.phtml n_supervisor,1,module=adm/class/classes&type=supervisor
+          </li>
+          <!-- Ajouter des items dans le menu par jlben -->
+          <li class="menuitem dochelp">
+            !read ./adm/oneitem.phtml dochelp,1,module=help/main&type=chapter0
+          </li>
+        !endif
+      !endif
+    <!--</ul>-->
+    !if $module=home and $wims_user=$empty
+       !! Help link
+      !set wims_hm = !append line help,4,module=help/main,help to $wims_hm
+      !increase $wims_hm_cnt
+    !endif
+    !!-----ModifiÈ le 1/6/19 by jlben ----!!
+    !!read themes/_widgets/user_links.phtml
+    !read themes/Euler/_widgets/user_links.phtml
+    </div>
+  </div><!-- fin menuglobal ? -->
+  !if $wims_lightpopup!=yes
+    !read themes/_widgets/ariane.phtml
+  !endif
+</div><!-- fin de wimstopbox-->
+<!-- AjoutÈ par jlben le 11/619 pour menu respnsive -->
+<!--<script src="html/themes/_inc/jquery.js"></script><!-- N'est pas compatible avec le filtre de seachr_engine de Nikaia-->
+<script src="html/themes/Euler/js/foundation.js"></script>
+<script src="html/themes/Euler/js/app.js"></script>
+
+<!-- FIn ajout -->
+
+<!-- End Euler topbox Widget -->

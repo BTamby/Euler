@@ -1,0 +1,265 @@
+/* HEADER */
+
+/* Logo : Modification pour le thème Euler par jlben */
+
+/*.wimslogo{float: left;}
+
+.wimslogo a img {
+  height: 50px;
+  height: 4.5em;
+  top: 0.15em;
+  right: auto;
+}
+
+#classlogo {
+   padding:2px;
+}
+
+#classlogo img{
+   max-height: 3.5em;
+}
+
+.institution_logo{
+  float:right;*
+  float:none;
+  position: absolute;
+  right: 0;
+}
+*/
+/*Les logos pour le thème Euler */
+#euler_wims_title{
+  /*border : solid 2px #ff0000;*/
+  	/*background-image: linear-gradient(#fefeff, #e1e1ff,#9696d9);*/
+	/*background-image: linear-gradient(rgba(1,1,1,0.25),rgba(0,0,0.55,0.85));*/
+  margin-bottom : 0;
+  border-bottom : 1px solid #9696d9;
+  display : table;
+  width : 100%;
+  padding-top :0.1em;
+}
+#le_logo_euler{
+  /*border: solid 1px #ff0000;*/
+  display : table-cell;
+  width : 15%;
+  vertical-align: top;
+}
+#le_logo_wims{
+   /*border: solid 1px #00ff00;*/
+  display : table-cell;
+  width :65%;
+  vertical-align: top;
+}
+#le_logo_acver{
+  /*border: solid 1px #0000ff;*/
+  display : table-cell;
+  width:20%;
+  vertical-align: top;
+
+}
+
+#euler_wims_title #le_logo_wims .text_euler_wims{
+   /*border: solid 2px #008845;*/
+  display : inline-block;
+  color : #ffffff;
+  font-weight: bold;
+  font-size: 5.5vw;
+  margin-left:3.5em;
+  width :2.75em;
+}
+#euler_wims_title #le_logo_wims img{
+  display : inline-block;
+  margin-top :0;
+  max-height: 4.5em;
+}
+#euler_wims_title #le_logo_euler img{
+  /*border: solid 1px #ff0000;*/
+  position : absolute;
+  left :1em;
+  max-height: 5em;
+}
+#euler_wims_title #le_logo_acver img{
+  /*border: solid 1px #008845;*/
+  position : absolute;
+  right :1em;
+  max-height: 5em;
+}
+
+
+#euler_wims_title .img-responsive{
+  max-width: 100%;
+  height : auto;
+
+}
+/* End of Logo */
+
+
+/* Menu navigation du thème Euler ***/
+
+/*#euler_container #wimstopbox .navbar{
+  border : solid 2px #ff00ff;
+  border-top: 1px solid #9696d9;
+  background-image : linear-gradient(#9696d9,#4d47d4 );
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom : 0;
+}
+
+#euler_container .navbar-inverse {
+  border-top-color : #ffffff;
+  border-left-color : transparent;
+  border-right-color : transparent;
+}
+
+#euler_container .navbar-inverse .navbar-nav > li > a{
+	color : #fefefe;
+}
+#euler_container .navbar-inverse .navbar-nav>.open>a{
+	background-color :#6e87f1;
+}
+Fin menu navigation***/
+#wimstopbox {
+/*border : solid 2px #00aa00;*/
+  color: #ffffff;
+  padding-top: 10px;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0,0, 0.5), transparent) ;
+  border-radius: 0 ;
+  padding-top: 0.1em;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+
+
+/*#wimstopbox .wimsmenu .topmenuitem a {
+   text-decoration: none;
+}
+#wimstopbox .wimsmenu .topmenuitem a:hover {
+   text-decoration:underline;
+}*/
+
+/* Est-ce utilisé dans le thème Euler ??
+#wimstopbox #wims_title {
+  float: left;
+  margin-left: 1em;
+}
+
+#wimstopbox div#wims_title h1.wims_title {
+  color : 0f00;
+  float: left;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-right: 45px;
+  font-size: 3.5em;
+}
+
+#wimstopbox div#wims_title h1.wims_title img{
+    width:40px;
+}
+*/
+#wimstopbox div#wims_title a{
+  color: #0000f5;
+  text-decoration: none;
+}
+
+#wimstopbox div#wims_title a:hover{
+  text-decoration: underline;
+}
+
+#wimstopbox div#wims_title h2.wims_subtitle {
+  text-align: left;
+  clear:both;
+  font-size: 14px;
+}
+
+/*** Breacrumbs **** by jlben****/
+#breadcrumbs_box{
+  /*border : 1px solid #ef00ef;*/
+  /*max-height: auto;*/
+}
+.breadcrumbs li{
+  font-size: 0.7em;
+  padding: auto;
+}
+
+/* MenuGlobal (topbox) */
+
+.menuglobal {
+	border-top : solid 1px #1A15F6;
+  /*background-color: #fff;*/
+  background-image: linear-gradient(#1A15F6,#ffffff);
+  /*color: rgba(0, 0, 0, 0.5);*/
+  color:#fff;
+  text-align: right;
+  position: relative;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .5)  ;
+  /*z-index: 100;*/
+  padding:0 .5em;
+}
+
+.menuglobal>.wimsmenu {
+  display: inline-block;
+}
+
+.menuglobal li {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  display: inline-block;
+  /*margin-right: 1.5em;*/
+  /*margin-bottom: 5px;*/
+}
+
+.menuglobal, .menuglobal li>a {
+  color: #454545;
+}
+
+
+/************* Display on different type of screen, by jlben*********/
+/* Small screens */
+@media only screen and (max-width: 40em) {
+  #euler_wims_title #le_logo_wims img{
+  max-height: 3em;
+}
+#euler_wims_title #le_logo_euler img{
+  max-height: 3em;
+}
+#euler_wims_title #le_logo_acver img{
+  max-height: 3em;
+}
+.breadcrumbs li{
+  font-size: 0.6em;
+  max-height: 0.9em;
+  padding: auto;
+}
+} 
+
+/* Small & medium screens */
+@media only screen and (max-width: 64em) {
+  
+}
+/* Medium screens */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  #euler_wims_title #le_logo_wims img{
+  max-height: 1.7em;
+}
+#euler_wims_title #le_logo_euler img{
+  max-height: 1.7em;
+}
+#euler_wims_title #le_logo_acver img{
+  max-height: 1.7em;
+}
+.breadcrumbs li{
+  font-size: 0.5em;
+  max-height: 0.9em;
+  padding: auto;
+}
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+/* Large screens */
+@media only screen and (min-width: 64.063em) {
+  
+
+  }
+} /* min-width 1025px, large screens */

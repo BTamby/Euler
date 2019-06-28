@@ -1,0 +1,88 @@
+<style>
+.orbit-next,.orbit-previous{
+  color:#929396;
+}
+button.orbit-previous, button.orbit-next{
+  background:lightgrey;
+  border-radius:5px;
+}
+.orbit-caption{
+  background:transparent;
+  font-weight: bold;
+  border-radius:5px;
+  text-align: center;
+  /*color:grey;*/
+
+}
+}
+</style>
+
+<div id="exemples" class="scroller wims_widget_box cell small-12 medium-6">
+    <div class="title_box">
+      <h2 class="wims_title">Exemples de ressources</h2>
+      <!--<br class="clearall" />-->
+    </div>
+
+    <div class="box_content">
+       <!----- Test carousel foundation -->
+       <div class="orbit" role="region" aria-label="Exemples de ressources" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;" data-timer-delay="50000" data-auto-play="true" data-pause-on-hover="false" data-accessible="true">
+          <div class="orbit-wrapper">
+          <!--
+            <div class="orbit-controls">
+              <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+              <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+            </div>
+          -->
+            <ul class="orbit-container">
+              <li class="is-active orbit-slide">
+		<h4>Titre 1</h4>
+                <figure class="orbit-figure">
+                  <img class="orbit-image" src="themes/$wims_theme/img/img1.png" alt="Space">
+                  <figcaption class="orbit-caption">
+                    !href module=H1/geometry/OEFgeog.fr&cmd=new&exo=cercle3 GeoGebra-Cercle-Centre-Diamètre
+                  </figcaption>
+                </figure>
+              </li>
+              <li class="orbit-slide">
+		<h4>Titre 2</h4>
+                <figure class="orbit-figure">
+                  <img class="orbit-image" src="themes/$wims_theme/img/img2.png" alt="Space">
+                  <figcaption class="orbit-caption">
+                    !href module=H5/stat/diagboite.fr&cmd=new&exo=2 Boite à moustache
+                  </figcaption>
+                </figure>
+              </li>
+              <!--
+              <li class="orbit-slide">
+		
+                <figure class="orbit-figure">
+                  <img class="orbit-image" src="themes/$wims_theme/img/img3.jpg" alt="Space">
+                  <figcaption class="orbit-caption">Titre 3</figcaption>
+                </figure>
+              </li>
+              <li class="orbit-slide">
+                <figure class="orbit-figure">
+                  <img class="orbit-image" src="themes/$wims_theme/img/img4.jpg" alt="Space">
+                  <figcaption class="orbit-caption">Titre 4 </figcaption>
+                </figure>
+              </li>
+            -->
+            </ul>
+          </div>
+          <nav class="orbit-bullets">
+            <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+            <!--
+            <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+            <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+            -->
+          </nav>
+        </div>
+
+
+
+       <!----- Fin test --------->
+    </div>
+</div>
+<script src="html/themes/Euler/js/foundation.js"></script>
+<script src="html/themes/Euler/js/app.js"></script>

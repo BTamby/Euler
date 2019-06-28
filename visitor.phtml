@@ -1,0 +1,82 @@
+<!-- Begin of Euler/visitor.phtml -->
+!! WIMS main entrance page theme.
+!nocache
+!if $module!=home
+ !exit
+!endif
+!! yet useful ??
+!!set wims_name_browse=$N_browse2
+!set home_theme=yes
+!set table_colors=$wims_ref_bgcolor,$wims_ref_bgcolor
+</div>
+<div id="wimsfrontpage">
+	<div id="wimsbodybox" ><!-- Test du 23/6 : grid_xy -->
+		<div id="wimspagebox" class="grid-container grid-container-padded fluid">
+			<div class="wimsbody">
+				<span class="wims_info">Denière modification le 24 juin 2019</span>
+				<!-- Zone vue sur le poste de l'administrateur-->
+					!read themes/_widgets/manager.phtml
+				<!--Contenu de la page d'accueil-->
+				<div class="grid-x grid-margin-x align-spaced">
+					<!-- Actualités de wims-euler -->
+					!read themes/$wims_theme/widgets/doc/actualites.phtml
+					!!read themes/$wims_theme/widgets/doc/actualites_gilles.phtml
+					<!-- Exemples d'activités sur wim-euler -->
+					!!read themes/$wims_theme/widgets/doc/exemples_test.phtml
+					!read themes/$wims_theme/widgets/doc/exemples.phtml
+				</div>
+				<div class="grid-x grid-margin-x align-spaced">
+				<!-- Recherche par programme -->
+					!read themes/$wims_theme/widgets/programs/index.phtml
+					<!-- Recherche par toxonomie ou lexique --->
+					!read themes/$wims_theme/widgets/lexique.phtml
+					<!-- Recherche par mot clé -->
+					!read themes/$wims_theme/widgets/search_engine.phtml
+				</div>
+
+    			<!--Recherche classes-->
+    			!!read themes/$wims_theme/widgets/search_classe.phtml
+
+				<!--<br class="clearall" />-->
+
+				!!<!--Recherche avancée exercices-->
+				!!read themes/$wims_theme/lang/home.phtml.fr
+				<div class="grid-x grid-margin-x align-spaced">
+					!if $s_category=V
+						 <!--Exemples de contenus-->
+						 !! Modifié par jlben pour le thème Euler le 22/6/19
+						 !!if $wims_theme=Nikaia2
+						 	!read themes/$wims_theme/widgets/front.phtml
+						 !!else
+						 	!!read ./front.phtml
+						 !!endif
+					!else
+					 <!--Résultats recherche exercices-->
+					 !read ./result.phtml
+					!endif
+				</div>
+
+			</div><!--end wimsbody-->
+		</div><!--wimspagebox-->
+
+		!set wims_show_stat=!tolower $wims_show_stat
+
+	</div><!--wimsbodybox-->
+
+    !! User opts
+    !set wims_tail_home = !append line pref,4,module=adm/light&phtml=useropts.phtml.$lang,pref to $wims_tail_home
+    !increase $wims_tail_home_n0
+
+    !distribute items ul,li into div0,div1
+	!read themes/_widgets/visitormenubox.phtml
+    !reset div0 div1
+
+    !!*** Ne pas appeler le fichier suivant, il affiche le logo de l'institution après le footer. By jlben pour Euler.***!!
+	!!read themes/_widgets/tailbox.phtml
+
+ </div><!--wimsfrontpage-->
+
+
+ </body>
+</html>
+<!-- end of Euler/visitor.phtml -->
