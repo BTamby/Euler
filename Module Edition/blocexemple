@@ -1,0 +1,22 @@
+!! Contenu du bloc exemples
+!! Chaque record est une slide pour le carousel.
+!! La variable nbslide indique le nombre de slides à mettre dans le bloc exemples en commençant par le haut
+!! Pour chaque record :
+!! première ligne : url du lien vers la ressource sur le titre de la diapo
+!! deuxième ligne : le titre de la diapo qui est aussi le contenu du title et du alt de img
+!! troisième ligne : url de l'image de la diapo
+
+!set nbslide=3
+
+:module=H1/geometry/OEFgeog.fr&cmd=new&exo=cercle3
+GeoGebra-Cercle
+modules/local/algebra/oefacveractualite.fr/data/GGB_cercle.png
+
+
+:module=H5/stat/diagboite.fr&cmd=new&exo=2
+Boite à moustache
+modules/local/algebra/oefacveractualite.fr/data/boite_moustache.png
+
+:module=H1/geometry/OEFgeog.fr&cmd=new&exo=cercle3
+GeoGebra-Cercle
+modules/local/algebra/oefacveractualite.fr/data/GGB_cercle.png
