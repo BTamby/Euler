@@ -19,6 +19,10 @@
 $wims_classname, $wims_institutionname\
 ($SU_log - $(wims_name_$class_typename))
 
+<!--essai GM 29/06/19-->
+class_type = $class_type
+<!--fin essai GM -->
+
 <div class="wims_content">
 
 !if _tool isin $wims_session
@@ -291,7 +295,26 @@ $wims_classname, $wims_institutionname\
   </div>
 !endif
 
-!read ./form.phtml
+<!-- Test GM 29/06/19 Zone avant Moteur recherche-->
+<p style="color:red"> BLOCS ACTU, EXEMPLES ET RECHERCHE A METTRE ICI</p>
+!href module=H1/geometry/OEFgeog.fr&cmd=new&exo=cercle3 ici
+<div class="grid-x grid-margin-x">
+          <!-- Actualités de wims-euler -->
+          !read themes/$wims_theme/widgets/doc/actualites.phtml
+          <!-- Exemples d'activités sur wim-euler -->
+          !read themes/$wims_theme/widgets/doc/exemples.phtml
+        </div>
+  
+<div class="grid-x grid-margin-x">
+        <!-- Recherche par programme -->
+          !read themes/$wims_theme/widgets/programs/index_essai.phtml
+          <!-- Recherche par toxonomie ou lexique --->
+          !read themes/$wims_theme/widgets/lexique_essai.phtml
+          <!-- Recherche par mot clé -->
+          !read themes/$wims_theme/widgets/search_engine.phtml
+ </div>
+ <!-- Fin test GM la  ligne suivante commentée-->
+!!read ./form.phtml
 !read ./result.phtml
 </div><!--/wims_content -->
 </div><!--/wimsbody -->
