@@ -1,3 +1,31 @@
+.orbit-next,.orbit-previous{
+  color:#929396;
+}
+button.orbit-previous, button.orbit-next{
+  background:lightgrey;
+  border-radius:5px;
+}
+.orbit-caption{
+  background:transparent;
+  font-weight: bold;
+  border-radius:5px;
+  text-align: center;
+  color:grey;
+  z-index: 1;
+}
+.euler_carousel_info{
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0px;
+  color:#999;
+  font-size:12px;
+}
+.euler_carousel_titre {
+  text-align: center;
+  /*margin-top: 0px;*/
+  margin-bottom: 0px;
+}
+
 .button:hover, .button:focus {
     background-color: #ededed;
     color: #126195; }
